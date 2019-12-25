@@ -10,9 +10,10 @@
     "lib/*"
   ],
   "scripts": {
-    "start": "webpack-dev-server --mode=development --config=doc.webpack.config.js",
+    "start": "npm run doc:start",
     "build": "tsc --declaration && webpack --mode=production",
-    "build:doc": "webpack --mode=production --config=doc.webpack.config.js",
+    "doc:start": "webpack-dev-server --mode=development --config=doc/webpack.config.js",
+    "doc:build": "webpack --mode=production --config=doc/webpack.config.js",
     "test": "jest",
     "eslint": "eslint src/**/*.ts",
     "stylelint": "stylelint src/**/*.css",

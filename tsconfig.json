@@ -17,6 +17,6 @@
     "strictNullChecks": true,
     "outDir": "lib"
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": ["src/**/*", "doc/src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx"]
 }

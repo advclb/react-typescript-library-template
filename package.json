@@ -2,18 +2,19 @@
   "name": "@advclb/foobar",
   "version": "1.0.0",
   "description": "Foobar library",
-  "main": "dist/foobar.umd.js",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/*",
-    "lib/*"
+    "src/*"
   ],
   "scripts": {
     "start": "npm run doc:start",
-    "build": "tsc --declaration && webpack --mode=production",
+    "build": "webpack --mode=production",
+    "deploy": "npm run doc:deploy",
     "doc:start": "webpack-dev-server --mode=development --config=doc/webpack.config.js",
     "doc:build": "webpack --mode=production --config=doc/webpack.config.js",
+    "doc:deploy": "gh-pages -d doc/dist",
     "test": "jest",
     "eslint": "eslint src/**/*.ts",
     "stylelint": "stylelint src/**/*.css",
@@ -45,6 +46,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^25.1.0",
     "prettier": "^1.19.1",

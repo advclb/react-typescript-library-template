@@ -1,11 +1,12 @@
 const path = require("path");
+const webpack = require("webpack");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: path.resolve(__dirname, path.join("src", "index.ts")),
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "foobar.umd.js",
-    library: "foobar",
+    filename: "index.js",
     libraryTarget: "umd"
   },
   devtool: "source-map",
@@ -28,5 +29,6 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"]
-  }
+  },
+  plugins: [new webpack.ProgressPlugin(), new CleanWebpackPlugin()]
 };

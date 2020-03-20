@@ -9,16 +9,12 @@
     "src/*"
   ],
   "scripts": {
-    "start": "npm run doc:start",
-    "build": "webpack --mode=production",
-    "deploy": "npm run doc:deploy",
-    "doc:start": "webpack-dev-server --mode=development --config=doc/webpack.config.js",
-    "doc:build": "webpack --mode=production --config=doc/webpack.config.js",
-    "doc:deploy": "gh-pages -d doc/dist",
+    "start": "ac doc:start",
+    "build": "ac doc:build && ac lib:build",
+    "deploy": "gh-pages -d doc/dist",
     "test": "jest",
-    "eslint": "eslint src/**/*.ts",
-    "stylelint": "stylelint src/**/*.css",
-    "prettier": "prettier --write src/**"
+    "lint": "eslint --fix src/** doc/src/** && stylelint --fix src/** doc/src/**",
+    "format": "prettier --write src/** doc/src/**"
   },
   "repository": {
     "type": "git",
@@ -31,35 +27,20 @@
   },
   "homepage": "https://github.com/advclb/foobar#readme",
   "devDependencies": {
-    "@advclb/stylelint-config": "latest",
+    "@advclb/scripts": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "@typescript-eslint/eslint-plugin": "latest",
-    "@typescript-eslint/parser": "latest",
-    "clean-webpack-plugin": "latest",
-    "css-loader": "latest",
     "eslint": "latest",
-    "eslint-config-airbnb": "latest",
-    "eslint-config-prettier": "latest",
-    "eslint-plugin-import": "latest",
-    "eslint-plugin-jsx-a11y": "latest",
-    "eslint-plugin-prettier": "latest",
-    "eslint-plugin-react": "latest",
-    "eslint-plugin-react-hooks": "latest",
+    "eslint-config-advclb": "latest",
+    "eslint-config-advclb-react": "latest",
+    "eslint-config-advclb-typescript": "latest",
     "gh-pages": "latest",
-    "html-webpack-plugin": "latest",
     "jest": "latest",
     "prettier": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "sass": "latest",
-    "sass-loader": "latest",
-    "style-loader": "latest",
     "stylelint": "latest",
-    "ts-loader": "latest",
-    "typescript": "latest",
-    "webpack": "latest",
-    "webpack-cli": "latest",
-    "webpack-dev-server": "latest"
+    "stylelint-config-advclb": "latest",
+    "typescript": "latest"
   }
 }

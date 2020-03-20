@@ -15,7 +15,7 @@ export default class FoobarContainer extends Component<
 > {
   state: FoobarContainerState = { active: false };
 
-  render() {
+  render(): ReactNode {
     const { children } = this.props;
     const { active } = this.state;
     return (

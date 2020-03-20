@@ -13,7 +13,7 @@
     "build": "ac doc:build && ac lib:build",
     "deploy": "gh-pages -d doc/dist",
     "test": "jest",
-    "lint": "eslint --fix src/** doc/src/** && stylelint --fix src/** doc/src/**",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx src/ doc/src/ && stylelint --fix src/**/*.css src/**/*.scss doc/src/**/*.css doc/src/**/*.scss",
     "format": "prettier --write src/** doc/src/**"
   },
   "repository": {

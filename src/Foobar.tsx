@@ -5,6 +5,6 @@ export type FoobarProps = {
   children: ReactNode;
 };
 
-export default function Foobar({ children }: FoobarProps) {
+export default function Foobar({ children }: FoobarProps): ReactNode {
   return <div>{children}</div>;
 }

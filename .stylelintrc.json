@@ -1,3 +1,5 @@
 {
-  "extends": ["@advclb/stylelint-config"]
+  "extends": [
+    "stylelint-config-advclb"
+  ]
 }

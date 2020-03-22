@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "Foobar library",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "dist/*",
-    "src/*"
+    "lib/*"
   ],
   "scripts": {
     "start": "ac doc:start",
-    "build": "ac doc:build && ac lib:build",
+    "build": "ac doc:build && ac lib:build && tsc --project tsconfig.json --declaration --outDir lib && cp src/*css lib",
     "deploy": "gh-pages -d doc/dist",
     "test": "jest",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx src/ doc/src/ && stylelint --fix src/**/*.css src/**/*.scss doc/src/**/*.css doc/src/**/*.scss",

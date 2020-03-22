@@ -2,7 +2,6 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
@@ -15,8 +14,7 @@
     "strict": true,
     "target": "es5",
     "noImplicitAny": true,
-    "strictNullChecks": true,
-    "outDir": "dist"
+    "strictNullChecks": true
   },
   "include": ["src"],
   "exclude": ["**/*.spec.ts", "**/*.spec.tsx"]

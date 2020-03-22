@@ -1,4 +1,4 @@
-import React, { ReactNode, Component } from "react";
+import React, { Component, ReactNode, ReactElement } from "react";
 import "./FoobarContainer.css";
 
 export interface FoobarContainerProps {
@@ -15,7 +15,7 @@ export default class FoobarContainer extends Component<
 > {
   state: FoobarContainerState = { active: false };
 
-  render(): ReactNode {
+  render(): ReactElement {
     const { children } = this.props;
     const { active } = this.state;
     return (

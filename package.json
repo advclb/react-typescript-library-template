@@ -1,6 +1,6 @@
 {
   "name": "@advclb/foobar",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Foobar library",
   "main": "dist/index.js",
   "module": "lib/index.js",
